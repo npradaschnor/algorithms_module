@@ -1,1 +1,0 @@
-#Write an algorithm that computes the running total of an array of numbers

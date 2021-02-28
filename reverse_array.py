@@ -1,7 +1,7 @@
 #Write an algorithm that returns a new array which is the reverse of the input.
 
 #Option 1
-def reverse(array):
+def reverse_array(array):
 
   a = len(array) #number of elements in the array
   i = - 1 #to get the last element of the array, variable that will be the index of the array in the for loop
@@ -33,7 +33,6 @@ arrayLetters = ['A', 'I', 'R', 'A', 'M']
 arrayNumbers = [2, 4, 0, 1, 3, 5, 10, 52, 85, 14, 38, 60, 74, 8, 21]
 arrayMixed = ['I', 2, 'LOVE', 'U', 10, 2, 'BR']
 
-print(reverse(arrayLetters))
+print(reverse_array(arrayLetters))
 print(reverse_again(arrayNumbers))
 print(reverse_module(arrayMixed))
-  
