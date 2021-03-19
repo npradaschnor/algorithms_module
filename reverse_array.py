@@ -33,6 +33,36 @@ arrayLetters = ['A', 'I', 'R', 'A', 'M']
 arrayNumbers = [2, 4, 0, 1, 3, 5, 10, 52, 85, 14, 38, 60, 74, 8, 21]
 arrayMixed = ['I', 2, 'LOVE', 'U', 10, 2, 'BR']
 
-print(reverse_array(arrayLetters))
-print(reverse_again(arrayNumbers))
-print(reverse_module(arrayMixed))
+#print(reverse_array(arrayLetters))
+#print(reverse_again(arrayNumbers))
+#print(reverse_module(arrayMixed))
+
+#recursive function
+
+
+def insert_symbol(string):
+  l = len(string)-1
+  new_string = '|'.join(string[i:i + 1] for i in range(0, len(string), 1))
+
+  if l == 0 | 1:
+    return string
+
+  else:
+    return str(new_string)
+
+print(insert_symbol('amada'))
+
+def reverse_string(string):
+  string = list(string)
+  s = len(string) #length of the string
+  s0 = string[0] #first letter of the string
+  
+  if s == 1: #base code
+    return string #if the string has only 1 letter, return the string itself
+  
+  else: #else
+    reverse = reverse_string(string[1:]) + [s0] #the function calls itself and adds in the end the first letter of the string
+
+    return ['|'.join(reverse[0: s])]
+
+print(reverse_string('GMIT'))
